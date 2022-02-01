@@ -2,47 +2,194 @@
 <%- include('partials/navbar.ejs');%>
 
 <div class="container">
-    <br>
-    <h1>Projetos</h1>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Guia Perguntas</h5>
-              <p class="card-text">Aplicação node.js estilo Yahoo respostas. Usuários podem fazer perguntas e responder perguntas de outros usuários.</p>
-              <br>
-              <a href="#" class="btn btn-warning">Visitar</a>
-            </div>
-          </div>
-        </div>
-       
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">GuiaPress</h5>
-              <p class="card-text">Aplicação Node.js estilo blog com painél administrativo em que usuários cadastrados como administradores podem gerenciar o blog criando, editando e deletando categorias e artigos.</p>
-              <img src="">
-              <a href="#" class="btn btn-warning">Visitar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
+<br>
+<h1>Projetos</h1>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Sistema para restaurante</h5>
-            <p class="card-text">Estou desenvolvendo um sistema para restaurente com Node.js, aprimorando um projeto que havia feito em C# durante o curso técnico. Por enquanto tenho apenas o front end e os arquivos iniciais do back-end. O objetivo é desenvolver um sistema de vendas online em que administradores podem gerencias as vendas. </p>
-            <img src="">
-            <a href="#" class="btn btn-warning">Visitar</a>
+<!--Primeiro Projeto-->
+<div class="swiffy-slider slider-nav-round slider-nav-animation slider-nav-animation-fadein slider-item-first-visible">
+  <ul class="slider-container">
+      <li class="slide-visible">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <h2 class="card-title" style="color: #ffc107;">GuiaPress</h2>
+                          <p class="card-text mt-3">Aplicação Node.js estilo blog com painél administrativo em que usuários cadastrados como administradores podem criar, editar e deletar categorias e artigos.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-xl-7">
+                      <img src="images/guiapress3.PNG" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
+      </li>
+      <li class="">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-7">
+                      <img src="images/guiapress1.PNG" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover" alt="...">
+                  </div>
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <h2 class="card-title" style="color:#ffc107;">Tecnologias utilizadas</h2>
+                          <p class="card-text mt-3"><ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Banco de dados MySQL</li>
+                            <li>EJS</li>
+                            <li>Sequelize</li>
+                            <li>Tinymce</li>
+                            <li>Bootstrap</li>
+                          </ul> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="">
+          <div class="card rounded-0 h-100 text-white">            
+              <div class="card-img-overlay d-flex align-items-start align-items-md-center justify-content-center flex-column">
+                  <h2 class="card-title h1 d-block d-md-inline-block"style="color: rgb(68, 65, 65);">Competências</h2>
+                  <p class="card-text lead col-md-8 col-lg-6" style="color: black; ">As principais competências desenvolvidas durante a elaboração deste projeto foram o desenvolvimento de um CRUD com Node e o relacionamentos no banco de dados. </p>
+                  <a href="#" class="btn btn-warning">ver projeto</a>
+                </div>
+          </div>
+      </li>
+  </ul>
 
+  <button type="button" class="slider-nav" aria-label="Go left"></button>
+  <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+  <div class="slider-indicators">
+      <button class="active" aria-label="Go to slide"></button>
+      <button aria-label="Go to slide" class=""></button>
+      <button aria-label="Go to slide" class=""></button>
+  </div>
+</div>
+<br><br>
+
+<!--Segundo Projeto-->
+<div class="swiffy-slider slider-nav-round slider-nav-animation slider-nav-animation-fadein slider-item-first-visible">
+  <ul class="slider-container">
+      <li class="slide-visible">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <h2 class="card-title" style="color: #7c10a7ea;">Guia de Perguntas</h2>
+                          <p class="card-text mt-3">Aplicação node.js estilo Yahoo respostas. Usuários podem fazer perguntas e responder perguntas de outros usuários.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-xl-7">
+                      <img src="images/guiaperguntas2.PNG" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-7">
+                      <img src="images/guiaperguntas1.PNG" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover" alt="...">
+                  </div>
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <h2 class="card-title" style="color:#7c10a7ea;">Tecnologias utilizadas</h2>
+                          <p class="card-text mt-3"><ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Banco de dados MySQL</li>
+                            <li>EJS</li>
+                            <li>Sequelize</li>
+                            <li>Body-parser</li>
+                            <li>Bootstrap</li>
+                          </ul> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="">
+          <div class="card rounded-0 h-100 text-white">             
+              <div class="card-img-overlay d-flex align-items-start align-items-md-center justify-content-center flex-column">
+                  <h2 class="card-title h1 d-block d-md-inline-block"style="color: rgb(68, 65, 65);">Competências</h2>
+                  <p class="card-text lead col-md-8 col-lg-6" style="color: black; ">As principais competências desenvolvidas durante a realização deste projeto foram as funções básicas do node, como a criação de rotas e o uso da template engine para pegar dinamicamente dados do back-end e mostra-los no front end.</p>
+                  <a href="#" class="btn btn-success">ver projeto</a>
+                </div>
+          </div>
+      </li>
+  </ul>
+
+  <button type="button" class="slider-nav" aria-label="Go left"></button>
+  <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+  <div class="slider-indicators">
+      <button class="active" aria-label="Go to slide"></button>
+      <button aria-label="Go to slide" class=""></button>
+      <button aria-label="Go to slide" class=""></button>
+  </div>
+</div>
+<br><br>
+
+<!--Terceiro Projeto-->
+<div class="swiffy-slider slider-nav-round slider-nav-animation slider-nav-animation-fadein slider-item-first-visible">
+  <ul class="slider-container">
+      <li class="slide-visible">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <h2 class="card-title" style="color: #18423c;">Sistema para Restaurante</h2>
+                          <p class="card-text mt-3">Estou desenvolvendo um sistema para restaurente com Node.js, aprimorando um projeto que havia feito em C# durante o curso técnico. Por enquanto tenho apenas o front end e os arquivos iniciais do back-end. O objetivo é desenvolver um sistema de vendas online em que administradores possam gerenciar as vendas.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-xl-7">
+                      <img src="images/brasilmenu1.jpg" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-7">
+                      <img src="images/brasilmenu3.jpg" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover" alt="...">
+                  </div>
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <h2 class="card-title" style="color:#18423c;">Tecnologias utilizadas até o momento</h2>
+                          <p class="card-text mt-3"><ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                          </ul> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="">
+          <div class="card rounded-0 h-100 text-white">             
+              <div class="card-img-overlay d-flex align-items-start align-items-md-center justify-content-center flex-column">
+                  <h2 class="card-title h1 d-block d-md-inline-block"style="color: rgb(68, 65, 65);">Desafios</h2>
+                  <p class="card-text lead col-md-8 col-lg-6" style="color: black; ">O desafio que terei para implementar o sistema para restaurante será migrar de uma tecnologia para outra, no caso, iniciei o projeto usando C# .NET e agora irei migrar para JavaScript. Outro desafio será a implementação de um sistema de pagamentos. </p>
+                  <a href="https://github.com/Caroline-Thais/restaurant-system" target="_blank" class="btn btn-success">ver projeto</a>
+                </div>
+          </div>
+      </li>
+  </ul>
+
+  <button type="button" class="slider-nav" aria-label="Go left"></button>
+  <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+  <div class="slider-indicators">
+      <button class="active" aria-label="Go to slide"></button>
+      <button aria-label="Go to slide" class=""></button>
+      <button aria-label="Go to slide" class=""></button>
+  </div>
+</div>
+<br><br>
 
 </div>
 
