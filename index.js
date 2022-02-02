@@ -2,8 +2,26 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
+const session = require("express-session");
+const flash = require("express-flash");
+const cookieParser = require("cookie-parser");
+
 
 const Contato = require("./Contato");
+
+//Cookie Parser
+app.use(cookieParser("itz"));
+
+//Express Session
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 }
+}))
+
+//Flash
+app.use(flash());
 
 //View engine
 app.set("view engine", "ejs");
@@ -36,20 +54,21 @@ app.get("/projetos", (req, res) => {
 });
 
 app.get("/contato", (req, res) => {
+
     res.render("contato");
 });
 
 app.post("/admin/recebidos", (req, res) => {
-    var assunto = req.body.assunto;
-    var mensagem = req.body.mensagem;
-    
-
+   
+      var email = req.body.email;
+      var mensagem = req.body.mensagem;
+        
     Contato.create({
-        assunto: assunto,
+        email: email,
         mensagem: mensagem
     }).then(() => {
         res.redirect("/")
-    }).catch("Não foi possível enviar. Entre em contato: caroline.thais.dev@gmail.com")
+    })  
 });
 
 

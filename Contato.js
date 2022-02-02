@@ -2,9 +2,9 @@ const Sequelize = require("sequelize");
 const connection = require("./database/database");
 
 const Contato = connection.define('contatos', {
-    assunto:{
+    email:{
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     },
     mensagem:{
         type: Sequelize.TEXT,
