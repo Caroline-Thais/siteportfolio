@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs');%>
+<%- include('partials/navbar.ejs');%>
+
+<div class="container">
+<br>
+    <div class="card">
+        <div class="card-header">
+            <form method="POST" action="admin/recebidos"><!--Mudar a action-->
+                <label>Assunto:</label>
+                <input type="text" placeholder="assunto" class="form-control" name="assunto">
+                <label>Para: caroline.thais.dev@gmail.com</label>
+        <div class="card-body">
+            <label>Mensagem:</label>
+            <textarea class="form-control" name="mensagem" id="mensagem"></textarea>
+
+            <button class="btn btn-warning mt-2">Enviar</button>
+        </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<%- include('partials/footer.ejs');%>
+
+<script src="/tinymce/js/tinymce/tinymce.min.js"></script>
+
+<script>
+
+tinymce.init({
+    selector: "#mensagem",
+    plugins: [
+    'advlist autolink link image lists print preview hr searchplace wordcount fullscreen insertdatetime media save paste emoticons'
+    ]
+})
+
+
+</script>
