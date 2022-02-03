@@ -1,57 +1,39 @@
 <%- include('partials/header.ejs');%>
 <%- include('partials/navbar.ejs');%>
 
-<div class="container">
+<div class="swiffy-slider h-100 slider-nav-autoplay slider-nav-autopause slider-nav-visible">
+  <ul class="slider-container h-100 overflow-hidden" id="sliders">
+      <a href="/sobre" alt="sobre"><h1>Conheça-Me</h1><img src="images/sobre.jpg" class="h-100 w-100" style="object-fit: cover;" loading="lazy" data-bs-dismiss="modal" alt="..."></li>
+      <a href="/projetos" alt="projetos"><h1>Conheça meus Projetos</h1><li class="h-100" tabindex="-1"><img src="images/projetos.jpg" class="h-100 w-100" style="object-fit: cover;" loading="lazy" data-bs-dismiss="modal" alt="..."></li></a>
+      <a href="/contato" alt="contato"><h1>Entre em Contato</h1><li class="h-100" tabindex="-1"><img src="images/contato.jpg" class="h-100 w-100" style="object-fit: cover;" loading="lazy" data-bs-dismiss="modal" alt="..."></li></a>
+  </ul>
 
-    <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Conheça-me</h5>
-              <a href="/sobre" ><p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="66" fill="#ffc107" class="bi bi-person" viewBox="0 0 16 16">
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-              </svg></p></a>
-            </div>
-          </div>
-        </div>
+  <button type="button" class="slider-nav" aria-label="Go left"></button>
+  <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
 
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Conheça meus projetos</h5><br>
-              <a href="/projetos"><p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#ffc107" class="bi bi-person-workspace" viewBox="0 0 16 16">
-                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
-              </svg></p></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Entre em contato</h5><br>
-                <a href="/contato"><p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#ffc107" class="bi bi-envelope" viewBox="0 0 16 16">
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                  </svg></p></a>
-              </div>
-            </div>
-          </div>
-
-    </div>
-
+  <div class="slider-indicators">
+      <button class="active" aria-label="Go to slide"></button>
+      <button aria-label="Go to slide" class=""></button>
+      <button aria-label="Go to slide" class=""></button>
+  </div>
 </div>
 
+
 <style>
+    img { 
+      filter: opacity(18%);
+    };
 
+    a{
+      position: relative;
+    }
 
-
-  .container{
-      margin-top: 10%;
-  }
-
-  .row{
-        padding-top: 5%;
+    h1{
+      color: #ffc107;
+      text-decoration: none;
+      position: absolute;
+      margin: 20%;
+      padding-left: 15%;    
     }
 
 </style>
