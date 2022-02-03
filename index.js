@@ -5,9 +5,10 @@ const connection = require("./database/database");
 const session = require("express-session");
 const flash = require("express-flash");
 const cookieParser = require("cookie-parser");
-
+const validator = require("validator");
 
 const Contato = require("./Contato");
+
 
 //Cookie Parser
 app.use(cookieParser("itz"));
@@ -29,6 +30,10 @@ app.set("view engine", "ejs");
 //Body-parser
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+//Express Validator
+const { body, validationResult } = require('express-validator');
+const { redirect } = require("express/lib/response");
 
 //Database
 connection.authenticate().then(() => {
@@ -55,22 +60,51 @@ app.get("/projetos", (req, res) => {
 
 app.get("/contato", (req, res) => {
 
-    res.render("contato");
+    var msgR = req.flash("msgR");
+    msgR = (msgR == undefined || msgR.length == 0) ? undefined : msgR;
+
+    var msgError = req.flash("msgError");
+    msgError = (msgError == undefined || msgError.length == 0) ? undefined : msgError;
+
+    res.render("contato", {msgError, msgR});
 });
 
-app.post("/admin/recebidos", (req, res) => {
-   
-      var email = req.body.email;
-      var mensagem = req.body.mensagem;
+
+
+app.post("/recebidos", 
+
+body('email').isEmail()
+.withMessage('Deve conter um e-mail.'),
+
+(req, res) => {
+
+    var msgError;
+    var msgR; 
+    
+    const errors = validationResult(req);
+    if (!errors.isEmpty()){
+
+        msgError = "Deve conter um e-amail válido."
+        req.flash("msgError", msgError);
+        /*json apenas para teste:
+        return res.status(400).json({ errors: errors.array() });*/
+        res.redirect("contato");
+    }else{
+
+    var email = req.body.email;
+    var mensagem = req.body.mensagem;
         
     Contato.create({
-        email: email,
-        mensagem: mensagem
+        email: req.body.email,
+        mensagem: req.body.mensagem,
     }).then(() => {
-        res.redirect("/")
-    })  
-});
 
+        msgR = "Mensagem enviada. Obrigada pelo contato!" 
+        req.flash("msgR", msgR);
+        res.redirect("contato");
+        })
+    }
+});
 
 //Porta
 app.listen(8084, () => {

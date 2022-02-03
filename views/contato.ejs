@@ -1,32 +1,47 @@
 <%- include('partials/header.ejs');%>
 <%- include('partials/navbar.ejs');%>
 
-<div class="container">
-<br>
-<h3>Contato</h3>
-<div class="shadow mb-5 bg-body rounded">
-    <div class="card border-0">
-        <div class="card-header">
-            <form method="POST" action="admin/recebidos">
-                <label>Email:</label>
-                <input type="text" placeholder="seu email aqui" class="form-control" name="email">
-                <label>Para: caroline.thais.dev@gmail.com</label>
-        <div class="card-body">
-            <label>Mensagem:</label>
-            <textarea class="form-control" name="mensagem" id="mensagem"></textarea>
+<div class="container"><br>
+    <h3>Contato</h3>
 
-            <button class="btn btn-warning mt-2">Enviar</button>
-       
-        </div>
-            </form>
+        <% if( msgError != 'undefined') { %>
+            <div class="erro"><%= msgError %></div>
+        <% } %>
+
+        <% if (msgR !== 'undefined') { %>
+            <div class="msgEnviada"><%= msgR %></div>
+        <% } %>
+
+    <div class="shadow mb-5 bg-body rounded">
+        <div class="card border-0">
+            <div class="card-header">
+                <form method="POST" action="recebidos">
+                    <label>Email:</label>
+                    <input type="text" placeholder="seu email aqui" class="form-control" name="email">
+                    <label>Para: caroline.thais.dev@gmail.com</label>
+            <div class="card-body">
+                <label>Mensagem:</label>
+                <textarea class="form-control" name="mensagem" id="mensagem"></textarea>
+                <button class="btn btn-warning mt-2">Enviar</button>       
+            </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
+<style>
+    .erro{
+        background-color: red;
+        color: white;
+        padding-left: 1em;
+    }
 
-
-
-</div>
+    .msgEnviada{
+        background-color: #ffc107;
+        padding-left: 1%;
+    }
+</style>
 
 <%- include('partials/footer.ejs');%>
 
@@ -34,12 +49,8 @@
 
 <script>
 
-tinymce.init({
-    selector: "#mensagem",
-    plugins: [
-    'advlist autolink link image lists print preview hr searchplace wordcount fullscreen insertdatetime media save paste emoticons'
-    ]
-})
-
+    tinymce.init({
+        selector: "#mensagem",
+    })
 
 </script>
