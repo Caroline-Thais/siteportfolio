@@ -1,7 +1,7 @@
 <%- include('partials/header.ejs');%>
 <%- include('partials/navbar.ejs');%>
 
-<div class="container"><br>
+<!--<div class="container"><br>
     <h3>Contato</h3>
 
         <% if( msgError != 'undefined') { %>
@@ -53,4 +53,30 @@
         selector: "#mensagem",
     })
 
-</script>
+</script>-->
+
+<div class="container"><br>
+    <h3>Contato</h3>
+    <div class="shadow mb-5 bg-body rounded">
+        <div class="card border-0">
+            <div class="card-header">       
+                <form action="https://formsubmit.co/caroline.thais.dev@gmail.com" method="POST" />
+                    <label>Email:</label>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="email" placeholder="seu email aqui" class="form-control" name="email">
+                    <input type="hidden" name="_cc" value="thaiscaroline.cms@gmail.com">
+                    <label>Para: caroline.thais.dev@gmail.com</label>
+                    <div class="card-body">
+                        <label>Mensagem:</label>
+                        <textarea class="form-control" name="mensagem"></textarea>
+                        <button class="btn btn-warning mt-2">Enviar</button>       
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs');%>
+

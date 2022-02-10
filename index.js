@@ -110,3 +110,9 @@ body('email').isEmail()
 app.listen(8084, () => {
     console.log("O servidor está rodando.")
 });
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8084;
+}
+app.listen(port);
